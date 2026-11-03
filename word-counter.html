@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Free Word Counter Online – Count Words & Characters | Smart Web Tools</title>
+  <meta name="description" content="Use our free online word counter to count words, characters, sentences and paragraphs instantly. Perfect for essays, articles, assignments and content writing.">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://smart-web-tool.github.io/smart-web-tools/word-counter.html">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Free Online Word Counter</h1>
+    <p>Count words, characters, sentences and paragraphs instantly.</p>
+    <nav><a href="index.html">Home</a></nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Count Words Online for Free</h2>
+      <p>
+        Need to check the word count of an essay, article, blog post or
+        social media caption? Our free word counter makes it easy.
+        Paste or type your text below to see your word and character
+        counts instantly. No registration or software installation needed.
+      </p>
+
+      <label for="textInput">Enter or paste your text</label>
+      <textarea id="textInput" rows="10" placeholder="Start typing or paste your text here..."></textarea>
+
+      <div aria-live="polite">
+        <p>Words: <strong id="words">0</strong></p>
+        <p>Characters (with spaces): <strong id="characters">0</strong></p>
+        <p>Characters (without spaces): <strong id="noSpaces">0</strong></p>
+        <p>Sentences: <strong id="sentences">0</strong></p>
+        <p>Paragraphs: <strong id="paragraphs">0</strong></p>
+      </div>
+
+      <button id="clearButton" type="button">Clear text</button>
+    </section>
+
+    <section>
+      <h2>How to Use This Word Counter</h2>
+      <ol>
+        <li>Type your text or paste it into the text box.</li>
+        <li>Check your word and character counts instantly.</li>
+        <li>Use the Clear Text button to start again.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Who Can Use an Online Word Counter?</h2>
+      <p>
+        Students can check essay word limits, writers can measure article
+        length, bloggers can review drafts, and professionals can check
+        the length of reports and documents.
+      </p>
+    </section>
+
+    <section>
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>How do I count words online?</h3>
+      <p>Paste your text into the box above. The tool automatically displays the word count.</p>
+
+      <h3>Does this word counter count spaces?</h3>
+      <p>It displays character counts both with spaces and without spaces.</p>
+
+      <h3>Is this word counter free?</h3>
+      <p>Yes. You can use this online word counter for free without creating an account.</p>
+
+      <h3>Can I use it for essays and articles?</h3>
+      <p>Yes. It is useful for essays, blog posts, reports, assignments and other writing.</p>
+    </section>
+
+    <section>
+      <h2>Explore More Free Tools</h2>
+      <ul>
+        <li><a href="character-counter.html">Character Counter</a></li>
+        <li><a href="case-converter.html">Case Converter</a></li>
+        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+        <li><a href="index.html">All Smart Web Tools</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Smart Web Tools</p>
+    <a href="privacy.html">Privacy Policy</a>
+  </footer>
+
+  <script>
+    const input = document.getElementById("textInput");
+
+    function updateCount() {
+      const text = input.value;
+      const trimmed = text.trim();
+
+      const words = trimmed ? trimmed.split(/\s+/).length : 0;
+      const sentences = (text.match(/[.!?]+(?=\s|$)/g) || []).length;
+      const paragraphs = trimmed
+        ? trimmed.split(/\n\s*\n/).filter(p => p.trim()).length
+        : 0;
+
+      document.getElementById("words").textContent = words;
+      document.getElementById("characters").textContent = text.length;
+      document.getElementById("noSpaces").textContent =
+        text.replace(/\s/g, "").length;
+      document.getElementById("sentences").textContent = sentences;
+      document.getElementById("paragraphs").textContent = paragraphs;
+    }
+
+    input.addEventListener("input", updateCount);
+
+    document.getElementById("clearButton").addEventListener("click", () => {
+      input.value = "";
+      updateCount();
+      input.focus();
+    });
+  </script>
+</body>
+</html>
