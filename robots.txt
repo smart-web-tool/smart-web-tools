@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Replace with your live sitemap URL after publishing:
+# Sitemap: https://YOUR-USERNAME.github.io/sitemap.xml
