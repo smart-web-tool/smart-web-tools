@@ -1,31 +1,39 @@
-# Smart Web Tools
+# Smart Web Tools – Complete Website
 
-A free, static website starter for GitHub Pages.
+This package contains a complete static website for GitHub Pages.
 
-## Included tools
-- Word and character counter
-- Case converter
-- SEO snippet preview
-- Keyword density checker
-- Percentage calculator
-- Password generator
-- robots.txt generator
+## Pages
+- Homepage: `/`
+- Word Counter: `/word-counter/`
+- Character Counter: `/character-counter/`
+- Case Converter: `/case-converter/`
+- SEO Snippet Checker: `/seo-snippet-checker/`
+- Keyword Density Checker: `/keyword-density-checker/`
+- Percentage Calculator: `/percentage-calculator/`
+- Password Generator: `/password-generator/`
+- Robots.txt Generator: `/robots-txt-generator/`
 
 ## Publish on GitHub Pages
-1. Create a GitHub account at https://github.com/.
-2. Create a **public** repository named `smart-web-tools`.
-3. Upload every file in this folder to the repository root (not the ZIP file itself).
-4. Open **Settings → Pages**.
-5. Under **Build and deployment**, choose **Deploy from a branch**.
-6. Select branch `main` and folder `/ (root)`, then Save.
-7. Wait for deployment. Your URL will look like `https://YOUR-USERNAME.github.io/smart-web-tools/`.
+1. Download and extract this ZIP.
+2. Open your repository: https://github.com/smart-web-tool/smart-web-tools
+3. Upload the contents of the extracted `Smart-Web-Tools-Complete` folder to the repository root (not the containing folder itself).
+4. Choose to replace existing files when GitHub asks, then commit changes.
+5. Wait for GitHub Pages to deploy.
+6. Test the homepage and each tool URL.
 
-## Important before publishing
-- Replace `https://YOUR-USERNAME.github.io/` in `index.html`, `robots.txt`, and `sitemap.xml` with your actual Pages URL. For a project site, include `/smart-web-tools/` in the URL and canonical URL.
-- Add a real contact email or another working contact method in `contact.html`.
-- Review and edit the About, Privacy, Terms and Disclaimer pages so they accurately describe your final site and any services you add.
-- Test every tool on desktop and mobile.
-- Add your live sitemap URL to Google Search Console after deployment.
+## SEO setup
+- Canonical URLs, sitemap.xml and robots.txt use: https://smart-web-tool.github.io/smart-web-tools
+- Submit `https://smart-web-tool.github.io/smart-web-tools/sitemap.xml` in Google Search Console.
+- Use URL Inspection to request indexing for the homepage and individual tool pages.
+- Indexing is not guaranteed and may take time.
+- Search volume and keyword difficulty are not embedded as fabricated numbers. Validate target terms by country using Google Keyword Planner, Google Trends or a reputable keyword research platform.
 
-## AdSense note
-GitHub Pages hosting is free, but AdSense approval and suitability of a `github.io` project subdomain are not guaranteed. Google reviews site ownership, content and policy compliance. Check current AdSense requirements before applying. Build genuinely useful supporting content, not thin pages created only to show ads.
+## Important notes
+- The SVG illustrations are original lightweight files and include descriptive alt text on the pages.
+- The SEO snippet checker is a preview, not a prediction of Google's exact result.
+- Keyword density is an approximate editorial calculation, not a ranking score.
+- Robots.txt is not a security mechanism.
+- The password generator uses the browser's Web Crypto API.
+- The contact page uses the repository issue tracker; consider adding a dedicated contact email if you have one.
+- Review all policy text and adapt it to your actual practices before monetization.
+- AdSense approval is not guaranteed. Add genuinely useful content, maintain a clear privacy policy and follow Google's publisher policies before applying.
